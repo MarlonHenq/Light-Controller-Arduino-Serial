@@ -9,10 +9,6 @@ int bData = 0;
 int cData = 0;
 int dData = 0;
 
-int hData = 0;
-int iData = 0;
-int jData = 0;
-
 int data = 0;
 
 int count = 0;
@@ -80,38 +76,14 @@ void loop() {
         dData = 0;
       }
 
-      if (data == '6'){
-        if(hData == 0){
-            hData = 1;
-            count = 0;
-         }
-         else{
-            hData = 0;
-         }
+
+      
+     if(aData == 1){
+        digitalWrite(a, LOW);
       }
-
-      if (data == '7'){
-        if(iData == 0){
-            iData = 1;
-            count = 0;
-         }
-         else{
-            iData = 0;
-         }
+      else{
+        digitalWrite(a, HIGH);
       }
-
-      if (data == '8'){
-        if(jData == 0){
-            jData = 1;
-            count = 0;
-         }
-         else{
-            jData = 0;
-         }
-      }
-
-
-
 
       if(bData == 1){
         digitalWrite(b, LOW);
@@ -132,29 +104,6 @@ void loop() {
       }
       else{
         digitalWrite(d, HIGH);
-      }
-
-
-
-      if (hData == '1'){
-        count = count + 1;
-      }
-
-      if (count >= 1000){
-        count = 0;
-        if (htorF == 0){
-          htorF = 1;
-        }
-        else{
-          htorF = 0;
-        }
-      }
-
-      if(htorF or aData == 1){
-        digitalWrite(a, LOW);
-      }
-      else{
-        digitalWrite(a, HIGH);
       }
       
    }
